@@ -1,0 +1,87 @@
+/* ============================================================
+   COLOR SYSTEM — "Photonic Lab"
+   A dark, instrument-panel palette built for an AI + photonics
+   research portfolio. Electric photon-cyan is the signature,
+   pulled directly from the Sam Animation studio logo (#16EAD5).
+   ============================================================ */
+
+:root {
+  /* ---- Raw surfaces (deep space → raised glass) ---- */
+  --void:        #05070E;  /* deepest backdrop, behind everything */
+  --obsidian:    #0A0E1A;  /* default page background */
+  --carbon:      #0F1422;  /* sunken panels / inputs */
+  --slate-900:   #121829;  /* base card */
+  --slate-800:   #182034;  /* raised card / hover */
+  --slate-700:   #222C45;  /* elevated, popovers */
+  --slate-600:   #2E3A58;  /* hairline-strong / dividers */
+
+  /* ---- Hairlines & translucency ---- */
+  --line:        rgba(244, 247, 255, 0.08);
+  --line-strong: rgba(244, 247, 255, 0.16);
+  --glass:       rgba(18, 24, 41, 0.62);
+  --glass-hi:    rgba(34, 44, 69, 0.55);
+  --scrim:       rgba(5, 7, 14, 0.72);
+
+  /* ---- Text ladder ---- */
+  --text-hi:     #F4F7FF;  /* headings, key numbers */
+  --text:        #C5CEE3;  /* body */
+  --text-mid:    #8A95B0;  /* secondary / captions */
+  --text-dim:    #5A647E;  /* disabled / faint metadata */
+
+  /* ---- Photon accents ---- */
+  --photon:        #16EAD5;  /* PRIMARY — cyan from logo */
+  --photon-bright: #4DF5E5;
+  --photon-deep:   #0BB6A6;
+  --photon-ghost:  rgba(22, 234, 213, 0.14);
+
+  --optic:         #7C6CFF;  /* violet — optical / indigo */
+  --optic-bright:  #9D90FF;
+  --optic-ghost:   rgba(124, 108, 255, 0.16);
+
+  --resonance:     #F5B642;  /* amber — resonance peak */
+  --resonance-ghost: rgba(245, 182, 66, 0.16);
+
+  --signal:        #FF4D5E;  /* red — anomaly / alert */
+  --signal-ghost:  rgba(255, 77, 94, 0.15);
+
+  --lime:          #88FFB0;  /* green — pass / online (from logo) */
+  --lime-ghost:    rgba(136, 255, 176, 0.15);
+
+  /* ---- Gradients ---- */
+  --grad-photon:    linear-gradient(135deg, #16EAD5 0%, #7C6CFF 100%); /* @kind color */
+  --grad-resonance: linear-gradient(135deg, #F5B642 0%, #FF4D5E 100%); /* @kind color */
+  --grad-spectrum:  linear-gradient(90deg, #16EAD5 0%, #7C6CFF 50%, #FF4D5E 100%); /* @kind color */
+  --grad-surface:   linear-gradient(160deg, #18203488 0%, #0F142200 60%); /* @kind color */
+  --grad-glow:      radial-gradient(60% 60% at 50% 0%, rgba(22,234,213,0.18) 0%, rgba(22,234,213,0) 70%); /* @kind color */
+
+  /* ============================================================
+     SEMANTIC ALIASES — prefer these in components
+     ============================================================ */
+  --bg:              var(--obsidian);
+  --bg-deep:         var(--void);
+  --surface:         var(--slate-900);
+  --surface-sunken:  var(--carbon);
+  --surface-raised:  var(--slate-800);
+  --surface-pop:     var(--slate-700);
+
+  --border:          var(--line);
+  --border-strong:   var(--line-strong);
+  --divider:         var(--slate-600);
+
+  --text-heading:    var(--text-hi);
+  --text-body:       var(--text);
+  --text-muted:      var(--text-mid);
+  --text-faint:      var(--text-dim);
+
+  --accent:          var(--photon);
+  --accent-bright:   var(--photon-bright);
+  --accent-contrast: #05201E;      /* ink on a photon-cyan fill */
+  --accent-ghost:    var(--photon-ghost);
+
+  --focus-ring:      var(--photon-bright);
+
+  --success:         var(--lime);
+  --warning:         var(--resonance);
+  --danger:          var(--signal);
+  --info:            var(--optic);
+}

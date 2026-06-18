@@ -1,0 +1,24 @@
+<!-- @dsCard group="Spacing" viewport="700x170" name="Radii & elevation" subtitle="Corner radii and dark-tuned shadows + glow" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin:0; background:var(--bg); padding:24px; display:flex; gap:18px; align-items:center; flex-wrap:wrap; }
+  .box { width:74px; height:74px; background:var(--surface-raised); border:1px solid var(--border-strong);
+    display:flex; align-items:flex-end; justify-content:center; padding-bottom:6px; }
+  .n { font-family:var(--font-mono); font-size:10px; color:var(--text-faint); }
+  .sh { box-shadow:var(--sh-lg); }
+  .gl { box-shadow:var(--glow-photon); border-color:var(--photon); }
+</style>
+</head>
+<body>
+  <div class="box" style="border-radius:var(--r-sm)"><span class="n">sm·8</span></div>
+  <div class="box" style="border-radius:var(--r-md)"><span class="n">md·12</span></div>
+  <div class="box" style="border-radius:var(--r-lg)"><span class="n">lg·16</span></div>
+  <div class="box" style="border-radius:var(--r-xl)"><span class="n">xl·22</span></div>
+  <div class="box sh" style="border-radius:var(--r-lg)"><span class="n">sh-lg</span></div>
+  <div class="box gl" style="border-radius:var(--r-lg)"><span class="n">glow</span></div>
+</body>
+</html>

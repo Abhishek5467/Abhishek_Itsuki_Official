@@ -1,0 +1,90 @@
+/* ============================================================
+   BASE — resets + global element defaults for the dark theme
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  font-weight: var(--fw-regular);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  color: var(--text-heading);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+  font-weight: var(--fw-semibold);
+  margin: 0;
+}
+
+p { margin: 0; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+a:hover { color: var(--accent-bright); }
+
+::selection {
+  background: var(--photon);
+  color: var(--accent-contrast);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--r-xs);
+}
+
+code, kbd, samp { font-family: var(--font-mono); }
+
+img { display: block; max-width: 100%; }
+
+/* ---- Signature background motifs (opt-in classes) ---- */
+
+/* Faint photonic grid — instrument-panel backdrop */
+.bg-grid {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Radial photon bloom from top */
+.bg-bloom { background-image: var(--grad-glow); }
+
+/* Layered: deep page with grid + bloom */
+.bg-lab {
+  background-color: var(--bg);
+  background-image: var(--grad-glow),
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 100% 100%, 56px 56px, 56px 56px;
+}
+
+/* Fine scanline texture for video-surveillance contexts */
+.bg-scan {
+  background-image: repeating-linear-gradient(
+    0deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px,
+    transparent 1px, transparent 3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

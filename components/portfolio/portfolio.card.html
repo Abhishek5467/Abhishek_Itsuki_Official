@@ -1,0 +1,80 @@
+<!-- @dsCard group="Components" viewport="700x640" name="Portfolio — Stats, Projects, Timeline" subtitle="StatCard, ProjectCard, SocialLink, SkillMeter, TimelineItem, TiltCard" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  body { margin:0; background:var(--bg); padding:26px; }
+  .stack { display:flex; flex-direction:column; gap:22px; }
+  .cap { font-family:var(--font-mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--text-faint); margin-bottom:10px; }
+  .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .grid2 { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+  .seg { padding-bottom:18px; border-bottom:1px solid var(--border); }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel">
+    const NS = window.AbhishekSinghPortfolioDesignSystem_9edb24;
+    const { StatCard, ProjectCard, SocialLink, SkillMeter, TimelineItem, SectionHeading } = NS;
+    function Demo() {
+      return (
+        <div className="stack">
+          <div className="seg">
+            <div className="cap">StatCard</div>
+            <div className="grid3">
+              <StatCard label="GATE ECE" value="1046" unit="AIR" sub="Score 662" />
+              <StatCard label="DA-HPFS · CUHK" value="0.816" unit="AUC" tone="optic" sub="+2.0% baseline" />
+              <StatCard label="DSA Solved" value="1000" unit="+" tone="lime" />
+            </div>
+          </div>
+          <div className="seg">
+            <div className="cap">ProjectCard</div>
+            <div className="grid2">
+              <ProjectCard category="Computer Vision" image="../../assets/research-cuhk-hpfs.png"
+                title="AI Surveillance" description="AutoEncoder video anomaly detection with HPFS."
+                tags={["PyTorch","3D-CNN"]} href="#" />
+              <ProjectCard category="Photonics" title="Microring Resonators"
+                description="MEEP FDTD simulation of silicon photonic resonators."
+                tags={["MEEP","Python"]} href="#" />
+            </div>
+          </div>
+          <div className="seg">
+            <div className="cap">SocialLink & SkillMeter</div>
+            <div className="grid2">
+              <div style={{display:"flex",flexDirection:"column",gap:10}}>
+                <SocialLink network="GitHub" handle="@Abhishek5467" color="#ffffff"
+                  icon="https://cdn.simpleicons.org/github/white" href="#" />
+                <SocialLink network="LinkedIn" handle="abhishek-singh" color="#0A66C2"
+                  icon="https://cdn.simpleicons.org/linkedin/0A66C2" href="#" />
+              </div>
+              <div style={{display:"flex",flexDirection:"column",gap:14,justifyContent:"center"}}>
+                <SkillMeter name="PyTorch" value={92} />
+                <SkillMeter name="Codeforces" display="1241 · Pupil" value={62} tone="optic" />
+                <SkillMeter name="CodeChef" display="1643 · 3★" value={74} tone="resonance" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="cap">TimelineItem</div>
+            <div>
+              <TimelineItem period="2023 — 2027" title="B.Tech, Electrical Engineering"
+                org="IIT Patna" location="Bihar"
+                description="Researching video anomaly detection & silicon photonics." />
+              <TimelineItem period="2024 — Present" title="Software Head" org="Inditronix AI Labs"
+                tone="optic" hollow description="Led architecture, AWS deployment and ML inference." />
+            </div>
+          </div>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("root")).render(<Demo />);
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Spacing scale" subtitle="4px base grid, 0–128px" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin:0; background:var(--bg); padding:24px; }
+  .row { display:flex; align-items:flex-end; gap:14px; }
+  .col { display:flex; flex-direction:column; align-items:center; gap:7px; }
+  .bar { width:26px; background:var(--grad-photon); border-radius:3px; }
+  .n { font-family:var(--font-mono); font-size:10px; color:var(--text-faint); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="col"><div class="bar" style="height:4px"></div><div class="n">1·4</div></div>
+    <div class="col"><div class="bar" style="height:8px"></div><div class="n">2·8</div></div>
+    <div class="col"><div class="bar" style="height:12px"></div><div class="n">3·12</div></div>
+    <div class="col"><div class="bar" style="height:16px"></div><div class="n">4·16</div></div>
+    <div class="col"><div class="bar" style="height:24px"></div><div class="n">5·24</div></div>
+    <div class="col"><div class="bar" style="height:32px"></div><div class="n">6·32</div></div>
+    <div class="col"><div class="bar" style="height:48px"></div><div class="n">8·48</div></div>
+    <div class="col"><div class="bar" style="height:64px"></div><div class="n">9·64</div></div>
+    <div class="col"><div class="bar" style="height:80px"></div><div class="n">10·80</div></div>
+  </div>
+</body>
+</html>

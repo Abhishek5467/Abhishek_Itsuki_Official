@@ -1,0 +1,33 @@
+<!-- @dsCard group="Colors" viewport="700x180" name="Surfaces & ink" subtitle="Deep-space surface ramp and the text ladder" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; background: var(--bg); padding: 24px; display:flex; flex-direction:column; gap:16px; }
+  .row { display:grid; grid-template-columns: repeat(6,1fr); gap:8px; }
+  .sw { border-radius: var(--r-sm); overflow:hidden; border:1px solid var(--border); }
+  .chip { height:48px; }
+  .lbl { font-family:var(--font-mono); font-size:10px; color:var(--text-faint); padding:5px 7px; background:var(--surface); }
+  .ink { display:flex; gap:18px; align-items:baseline; }
+  .ink span { font-family:var(--font-body); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:var(--void)"></div><div class="lbl">void</div></div>
+    <div class="sw"><div class="chip" style="background:var(--obsidian)"></div><div class="lbl">obsidian</div></div>
+    <div class="sw"><div class="chip" style="background:var(--carbon)"></div><div class="lbl">carbon</div></div>
+    <div class="sw"><div class="chip" style="background:var(--slate-900)"></div><div class="lbl">slate-900</div></div>
+    <div class="sw"><div class="chip" style="background:var(--slate-800)"></div><div class="lbl">slate-800</div></div>
+    <div class="sw"><div class="chip" style="background:var(--slate-700)"></div><div class="lbl">slate-700</div></div>
+  </div>
+  <div class="ink">
+    <span style="color:var(--text-hi); font-size:20px; font-weight:600;">text-hi</span>
+    <span style="color:var(--text); font-size:18px;">text</span>
+    <span style="color:var(--text-mid); font-size:16px;">text-mid</span>
+    <span style="color:var(--text-dim); font-size:15px;">text-dim</span>
+  </div>
+</body>
+</html>

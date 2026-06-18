@@ -1,0 +1,11 @@
+/* ============================================================
+   FONTS — Abhishek Singh Portfolio
+   Display: Space Grotesk (geometric, technical headlines)
+   Body:    Sora (humanist, readable, engineering-modern)
+   Mono:    JetBrains Mono (data, ranks, coordinates, code)
+   ------------------------------------------------------------
+   Served from Google Fonts. If you need fully offline binaries,
+   replace these @import lines with local @font-face declarations.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap');

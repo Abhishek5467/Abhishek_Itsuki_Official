@@ -1,0 +1,64 @@
+/* ============================================================
+   TYPOGRAPHY SYSTEM
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: 'Space Grotesk', 'Sora', system-ui, sans-serif;
+  --font-body:    'Sora', system-ui, -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* ---- Fluid display scale (clamp: min, vw, max) ---- */
+  --fs-hero:   clamp(3rem, 8vw, 6.5rem);     /* @kind font */
+  --fs-d1:     clamp(2.5rem, 5.5vw, 4rem);   /* @kind font */
+  --fs-d2:     clamp(2rem, 4vw, 3rem);       /* @kind font */
+  --fs-h1:     2rem;       /* 32 */
+  --fs-h2:     1.5rem;     /* 24 */
+  --fs-h3:     1.25rem;    /* 20 */
+  --fs-lg:     1.125rem;   /* 18 */
+  --fs-body:   1rem;       /* 16 */
+  --fs-sm:     0.875rem;   /* 14 */
+  --fs-xs:     0.75rem;    /* 12 */
+  --fs-2xs:    0.6875rem;  /* 11 — mono labels */
+
+  /* ---- Weights ---- */
+  --fw-light:    300; /* @kind font */
+  --fw-regular:  400; /* @kind font */
+  --fw-medium:   500; /* @kind font */
+  --fw-semibold: 600; /* @kind font */
+  --fw-bold:     700; /* @kind font */
+
+  /* ---- Line heights ---- */
+  --lh-tight:   1.04;   /* @kind font */
+  --lh-snug:    1.2;    /* @kind font */
+  --lh-normal:  1.55;   /* @kind font */
+  --lh-relaxed: 1.7;    /* @kind font */
+
+  /* ---- Letter spacing ---- */
+  --ls-tighter: -0.04em;  /* @kind font */
+  --ls-tight:   -0.02em;  /* @kind font */
+  --ls-normal:  0;        /* @kind font */
+  --ls-wide:    0.04em;   /* @kind font */
+  --ls-eyebrow: 0.22em;   /* @kind font */
+}
+
+/* ---- Helper classes (optional, components can use tokens directly) ---- */
+.t-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-500, 500);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.t-display {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tighter);
+  color: var(--text-heading);
+}
+.t-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}

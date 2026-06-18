@@ -1,0 +1,26 @@
+<!-- @dsCard group="Colors" viewport="700x180" name="Accent palette" subtitle="Photon cyan primary + optical/resonance/signal/lime" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; background: var(--bg); padding: 24px; }
+  .row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .sw { border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--border); }
+  .chip { height: 64px; }
+  .meta { padding: 8px 10px; background: var(--surface); }
+  .name { font-family: var(--font-mono); font-size: 11px; color: var(--text-hi); letter-spacing: .04em; }
+  .hex { font-family: var(--font-mono); font-size: 10px; color: var(--text-faint); margin-top: 2px; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:var(--photon)"></div><div class="meta"><div class="name">PHOTON</div><div class="hex">#16EAD5</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--optic)"></div><div class="meta"><div class="name">OPTIC</div><div class="hex">#7C6CFF</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--resonance)"></div><div class="meta"><div class="name">RESONANCE</div><div class="hex">#F5B642</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--signal)"></div><div class="meta"><div class="name">SIGNAL</div><div class="hex">#FF4D5E</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--lime)"></div><div class="meta"><div class="name">LIME</div><div class="hex">#88FFB0</div></div></div>
+  </div>
+</body>
+</html>

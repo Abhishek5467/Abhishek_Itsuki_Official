@@ -1,0 +1,19 @@
+<!-- @dsCard group="Brand" viewport="700x190" name="Background motifs" subtitle="Photonic grid, top bloom and scanlines" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin:0; background:var(--bg); padding:22px; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .tile { height:140px; border-radius:var(--r-md); border:1px solid var(--border); position:relative; overflow:hidden; }
+  .lbl { position:absolute; left:10px; bottom:9px; font-family:var(--font-mono); font-size:10px;
+    color:var(--text-mid); letter-spacing:.08em; }
+</style>
+</head>
+<body>
+  <div class="tile bg-grid"><span class="lbl">.bg-grid</span></div>
+  <div class="tile bg-lab"><span class="lbl">.bg-lab</span></div>
+  <div class="tile bg-scan" style="background:var(--carbon)"><span class="lbl">.bg-scan</span></div>
+</body>
+</html>
