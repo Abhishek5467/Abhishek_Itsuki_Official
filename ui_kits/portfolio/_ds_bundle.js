@@ -1971,11 +1971,35 @@ function Contact() {
   }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 Abhishek Singh \xB7 IIT Patna"), /*#__PURE__*/React.createElement("span", null, "Built with the Photonic Lab design system"))));
 }
 function PortfolioApp() {
-  const {
-    Hero,
-    SkillsTicker
-  } = window.PortfolioSections;
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(SkillsTicker, null), /*#__PURE__*/React.createElement(Research, null), /*#__PURE__*/React.createElement(Projects, null), /*#__PURE__*/React.createElement(Achievements, null), /*#__PURE__*/React.createElement(About, null), /*#__PURE__*/React.createElement(Studio, null), /*#__PURE__*/React.createElement(Contact, null));
+  if (!window.PortfolioSections) {
+    return (
+      <div
+        style={{
+          color: "white",
+          padding: "40px",
+          fontFamily: "sans-serif",
+        }}
+      >
+        Error: PortfolioSections not loaded.
+      </div>
+    );
+  }
+
+  const Hero = window.PortfolioSections.Hero;
+  const SkillsTicker = window.PortfolioSections.SkillsTicker;
+
+  return (
+    <>
+      <Hero />
+      <SkillsTicker />
+      <Research />
+      <Projects />
+      <Achievements />
+      <About />
+      <Studio />
+      <Contact />
+    </>
+  );
 }
 window.PortfolioApp = PortfolioApp;
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/portfolio/sections-bottom.jsx", error: String((e && e.message) || e) }); }
