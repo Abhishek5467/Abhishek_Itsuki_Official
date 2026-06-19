@@ -1758,120 +1758,120 @@ function About() {
   }))));
 }
 
-/* ───────────── STUDIO / YOUTUBE ───────────── */
 function Studio() {
-  return /*#__PURE__*/React.createElement(Section, {
-    id: "studio",
-    style: {
-      borderBottom: "1px solid var(--border)"
-    }
-  }, /*#__PURE__*/React.createElement(Container, null, /*#__PURE__*/React.createElement(TiltCard, {
-    intensity: 5,
-    style: {
-      padding: 0,
-      overflow: "hidden",
-      background: "var(--surface)"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "grid",
-      gridTemplateColumns: "1.1fr .9fr",
-      alignItems: "stretch"
-    },
-    className: "two-col"
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: "var(--sp-8)"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      gap: 8
-    }
-  }, /*#__PURE__*/React.createElement(Badge, {
-    tone: "signal",
-    dot: true
-  }, "Creator"), /*#__PURE__*/React.createElement(Badge, {
-    tone: "neutral"
-  }, "Studio \xB7 Soon")), /*#__PURE__*/React.createElement("h3", {
-    style: {
-      fontFamily: "var(--font-display)",
-      fontWeight: 700,
-      fontSize: "clamp(1.8rem,3vw,2.6rem)",
-      color: "var(--text-hi)",
-      letterSpacing: "-0.03em",
-      margin: "16px 0 0",
-      lineHeight: 1.05
-    }
-  }, "3D, in motion \u2014", /*#__PURE__*/React.createElement("br", null), "on ", /*#__PURE__*/React.createElement("em", {
-    style: {
-      fontStyle: "normal",
-      background: "var(--grad-resonance)",
-      WebkitBackgroundClip: "text",
-      backgroundClip: "text",
-      color: "transparent"
-    }
-  }, "IITakuEdits")), /*#__PURE__*/React.createElement("p", {
-    style: {
-      color: "var(--text-muted)",
-      fontSize: "var(--fs-lg)",
-      lineHeight: 1.6,
-      marginTop: 16,
-      maxWidth: "42ch"
-    }
-  }, "On my YouTube channel ", /*#__PURE__*/React.createElement("b", {
-    style: {
-      color: "var(--text-hi)",
-      fontWeight: 600
-    }
-  }, "IITakuEdits"), ", engineering meets art \u2014 learning the art of editing, soon I will start my Coding tutorials on Codeforces, broken down step by step. Also building toward ", /*#__PURE__*/React.createElement("b", {
-    style: {
-      color: "var(--text-hi)",
-      fontWeight: 600
-    }
-  }, "Sam Animation Studio"), ", my upcoming venture."), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      flexWrap: "wrap",
-      gap: 12,
-      marginTop: 28
-    }
-  }, /*#__PURE__*/React.createElement(Button, {
-    variant: "signal",
-    iconLeft: /*#__PURE__*/React.createElement("img", {
-      src: ICON.youtube,
-      alt: "",
-      style: {
-        width: 18,
-        height: 18
-      }
-    }),
-    href: "https://www.youtube.com/@IITakuEdits"
-  }, "Watch IITakuEdits"), /*#__PURE__*/React.createElement(Button, {
-    variant: "ghost",
-    href: "https://github.com/Abhishek5467/Sam_Animation"
-  }, "Studio repo"))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "grid",
-      placeItems: "center",
-      padding: "var(--sp-7)",
-      background: "radial-gradient(circle at 50% 30%, rgba(255,77,94,.12), transparent 60%), var(--surface-sunken)",
-      borderLeft: "1px solid var(--border)"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      background: "#fff",
-      borderRadius: "var(--r-md)",
-      padding: "18px 22px"
-    }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: "../../assets/logo_for_sam_animation_studio.png",
-    alt: "Sam Animation logo",
-    style: {
-      width: 220,
-      display: "block"
-    }
-  })))))));
+  return (
+    <Section
+      id="studio"
+      style={{
+        borderBottom: "1px solid var(--border)",
+      }}
+    >
+      <Container>
+        <TiltCard
+          intensity={5}
+          style={{
+            overflow: "hidden",
+            background: "var(--surface)",
+          }}
+        >
+          <div
+            style={{
+              padding: "var(--sp-8)",
+              textAlign: "center",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                gap: 8,
+                marginBottom: 16,
+              }}
+            >
+              <Badge tone="signal" dot>
+                Creator
+              </Badge>
+
+              <Badge tone="neutral">
+                YouTube
+              </Badge>
+            </div>
+
+            <h3
+              style={{
+                fontFamily: "var(--font-display)",
+                fontWeight: 700,
+                fontSize: "clamp(1.8rem,3vw,2.8rem)",
+                color: "var(--text-hi)",
+                letterSpacing: "-0.03em",
+                lineHeight: 1.05,
+                margin: 0,
+              }}
+            >
+              Engineering, Animation
+              <br />
+              & Coding on{" "}
+              <em
+                style={{
+                  fontStyle: "normal",
+                  background: "var(--grad-resonance)",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  color: "transparent",
+                }}
+              >
+                IITakuEdits
+              </em>
+            </h3>
+
+            <p
+              style={{
+                color: "var(--text-muted)",
+                fontSize: "var(--fs-lg)",
+                lineHeight: 1.7,
+                maxWidth: "48ch",
+                margin: "24px auto 0",
+              }}
+            >
+              IITakuEdits is my YouTube channel where I share
+              animation experiments, editing projects,
+              engineering content, and soon competitive
+              programming tutorials with step-by-step
+              explanations for Codeforces, LeetCode, and
+              problem-solving enthusiasts.
+            </p>
+
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                gap: 12,
+                marginTop: 32,
+                flexWrap: "wrap",
+              }}
+            >
+              <Button
+                variant="signal"
+                iconLeft={
+                  <img
+                    src={ICON.youtube}
+                    alt=""
+                    style={{
+                      width: 18,
+                      height: 18,
+                    }}
+                  />
+                }
+                href="https://www.youtube.com/@IITakuEdits"
+              >
+                Watch IITakuEdits
+              </Button>
+            </div>
+          </div>
+        </TiltCard>
+      </Container>
+    </Section>
+  );
 }
 
 /* ───────────── CONTACT / FOOTER ───────────── */
