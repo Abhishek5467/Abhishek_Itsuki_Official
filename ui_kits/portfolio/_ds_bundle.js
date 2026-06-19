@@ -1824,7 +1824,7 @@ function Studio() {
       color: "var(--text-hi)",
       fontWeight: 600
     }
-  }, "IITakuEdits"), ", engineering meets art \u2014 Blender models, Three.js shaders and real-time scenes, broken down step by step. Building toward ", /*#__PURE__*/React.createElement("b", {
+  }, "IITakuEdits"), ", engineering meets art \u2014 learning the art of editing, soon I will start my Coding tutorials on Codeforces, broken down step by step. Also building toward ", /*#__PURE__*/React.createElement("b", {
     style: {
       color: "var(--text-hi)",
       fontWeight: 600
@@ -1865,7 +1865,7 @@ function Studio() {
       padding: "18px 22px"
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: "../../assets/sam-animation-logo.svg",
+    src: "../../assets/logo_for_sam_animation_studio.png",
     alt: "Sam Animation logo",
     style: {
       width: 220,
